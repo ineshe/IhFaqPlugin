@@ -5,7 +5,7 @@ namespace IhFaqPlugin\Migration;
 use Doctrine\DBAL\Connection;
 use Shopware\Core\Framework\Migration\MigrationStep;
 
-class Migration1697298000 extends MigrationStep
+class Migration1697298000AddFaqTable extends MigrationStep
 {
     public function getCreationTimestamp(): int
     {
@@ -24,7 +24,7 @@ class Migration1697298000 extends MigrationStep
             PRIMARY KEY (`id`),
             KEY `fk.ih_faq.product_id` (`product_id`),
             CONSTRAINT `fk.ih_faq.product_id` FOREIGN KEY (`product_id`)
-                REFERENCES `product` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE
+                REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;");
     }
 

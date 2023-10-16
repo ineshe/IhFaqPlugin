@@ -8,5 +8,13 @@
         <service id="IhFaqPlugin\Core\Content\Faq\FaqDefinition">
             <tag name="shopware.entity.definition" entity="ih_faq" />
         </service>
+
+        <service id="IhFaqPlugin\Extension\Content\Product\ProductExtension">
+            <tag name="shopware.entity.extension"/>
+        </service>
+
+        <service id="IhFaqPlugin\Extension\Content\Product\ProductExtensionDefinition">
+            <tag name="shopware.entity.definition" entity="ih_product_extension" />
+        </service>
     </services>
 </container>

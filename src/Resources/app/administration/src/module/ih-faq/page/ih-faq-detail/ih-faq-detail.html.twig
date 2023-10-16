@@ -1,0 +1,41 @@
+
+
+{% block ih_faq_detail %}
+<sw-page class="ih-faq-detail">
+
+    {% block ih_faq_detail_smart_bar_actions %}
+    <template #smart-bar-actions>
+        <sw-button :routerLink="{ name: 'ih.faq.index' }">
+            {{ $tc('ih-faq.detail.cancelButtonText') }}
+        </sw-button>
+
+        <sw-button-process
+            :isLoading="isLoading"
+            :processSuccess="processSuccess"
+            variant="primary"
+            @process-finish="saveFinish"
+            @click="onClickSave">
+            {{ $tc('ih-faq.detail.saveButtonText') }}
+        </sw-button-process>
+    </template>
+    {% endblock %}
+
+    <template #content>
+
+        {% block ih_faq_detail_content %}
+        <sw-card-view>
+            <sw-card v-if="question" :isLoading="isLoading" position-identifier="top">
+                <sw-field v-model="question.question" :label="$tc('ih-faq.detail.questionLabel')"></sw-field>
+                <sw-field v-model="question.answer" :label="$tc('ih-faq.detail.answerLabel')"></sw-field>
+                <sw-entity-single-select
+                    v-model="question.productId"
+                    entity="product"
+                    :label="$tc('ih-faq.detail.assignProductLabel')">
+                </sw-entity-single-select>
+            </sw-card>
+        </sw-card-view>
+        {% endblock %}
+
+    </template>
+</sw-page>
+{% endblock %}

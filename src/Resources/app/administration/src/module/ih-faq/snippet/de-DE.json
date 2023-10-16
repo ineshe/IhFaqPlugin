@@ -1,0 +1,21 @@
+{
+    "ih-faq": {
+        "general": {
+            "mainMenuItemGeneral": "FAQ",
+            "descriptionTextModule": "Verwaltung des FAQ."
+        },
+        "list": {
+            "columnQuestion": "Frage",
+            "columnAnswer": "Antwort",
+            "addButtonText": "FAQ Eintrag anlegen"
+        },
+        "detail": {
+            "cancelButtonText": "Abbrechen",
+            "saveButtonText": "Speichern",
+            "questionLabel": "Frage",
+            "answerLabel": "Antwort",
+            "errorTitle": "Fehler beim Speichern des FAQ Eintrags",
+            "assignProductLabel": "Produkt"
+        }
+    }
+}

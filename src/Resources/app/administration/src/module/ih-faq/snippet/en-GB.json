@@ -1,0 +1,21 @@
+{
+    "ih-faq": {
+        "general": {
+            "mainMenuItemGeneral": "FAQ",
+            "descriptionTextModule": "Manage FAQ here."
+        },
+        "list": {
+            "columnQuestion": "Question",
+            "columnAnswer": "Answer",
+            "addButtonText": "Add FAQ Entry"
+        },
+        "detail": {
+            "cancelButtonText": "Cancel",
+            "saveButtonText": "Save",
+            "questionLabel": "Question",
+            "answerLabel": "Answer",
+            "errorTitle": "Error saving the FAQ Entry",
+            "assignProductLabel": "Produkt"
+        }
+    }
+}

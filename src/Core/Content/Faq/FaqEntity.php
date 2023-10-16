@@ -20,7 +20,7 @@ class FaqEntity extends Entity
      */    
     protected $answer;
 
-        /**
+    /**
      * @var ProductEntity
      */
     protected $product;

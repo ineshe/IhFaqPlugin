@@ -1,0 +1,26 @@
+{% block ih_faq_list %}
+<sw-page class="ih-faq-list">
+
+    {% block ih_faq_list_smart_bar_actions %}
+    <template #smart-bar-actions>
+        <sw-button variant="primary" :routerLink="{ name: 'ih.faq.create' }">
+            {{ $tc('ih-faq.list.addButtonText') }}
+        </sw-button>
+    </template>
+    {% endblock %}
+
+    {% block ih_faq_list_content %}
+    <template #content>
+        <sw-entity-listing
+            v-if="questions"
+            :items="questions"
+            :repository="repository"
+            :showSelection="false"
+            :columns="columns"
+            detailRoute="ih.faq.detail">
+        </sw-entity-listing>
+    </template>
+    {% endblock %}
+
+</sw-page>
+{% endblock %}

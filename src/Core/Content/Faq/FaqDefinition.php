@@ -6,16 +6,19 @@ use Shopware\Core\Framework\DataAbstractionLayer\EntityDefinition;
 use Shopware\Core\Framework\DataAbstractionLayer\Field\Flag\PrimaryKey;
 use Shopware\Core\Framework\DataAbstractionLayer\Field\Flag\Required;
 use Shopware\Core\Framework\DataAbstractionLayer\Field\IdField;
+use Shopware\Core\Framework\DataAbstractionLayer\Field\FkField;
 use Shopware\Core\Framework\DataAbstractionLayer\Field\ManyToOneAssociationField;
 use Shopware\Core\Framework\DataAbstractionLayer\Field\LongTextField;
 use Shopware\Core\Framework\DataAbstractionLayer\FieldCollection;
-use Shopware\Core\Content\ProductDefinition;
+use Shopware\Core\Content\Product\ProductDefinition;
 
 class FaqDefinition extends EntityDefinition
 {
+    public const ENTITY_NAME = 'ih_faq';
+
     public function getEntityName(): string
     {
-        return 'ih_faq';
+        return self::ENTITY_NAME;
     }
 
     public function getCollectionClass(): string
