@@ -1,0 +1,14 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/index.html.twig' %}
+
+{% block page_product_detail_content %}
+{{ parent() }}
+
+    {% block page_product_detail_faq %}
+        <p class="ih-faq-title">FAQ</p>
+        {% for faq in page.product.extension('faq').elements %}
+            <p class="ih-faq-question">{{ faq.question }}</p>
+            <p>{{ faq.answer }}</p>
+        {% endfor %}
+    {% endblock %}
+
+{% endblock %}

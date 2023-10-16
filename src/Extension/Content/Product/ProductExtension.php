@@ -5,19 +5,18 @@ namespace IhFaqPlugin\Extension\Content\Product;
 use Shopware\Core\Content\Product\ProductDefinition;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityExtension;
 use Shopware\Core\Framework\DataAbstractionLayer\FieldCollection;
-use Shopware\Core\Framework\DataAbstractionLayer\Field\OneToOneAssociationField;
+use Shopware\Core\Framework\DataAbstractionLayer\Field\OneToManyAssociationField;
+use IhFaqPlugin\Core\Content\Faq\FaqDefinition;
 
 class ProductExtension extends EntityExtension
 {
     public function extendFields(FieldCollection $collection): void
     {
         $collection->add(
-            new OneToOneAssociationField(
-                propertyName: 'productExtension', 
-                storageName: 'id', 
-                referenceField: 'product_id', 
-                referenceClass: ProductExtensionDefinition::class, 
-                autoload: true
+            new OneToManyAssociationField(
+                propertyName: 'faq',
+                referenceClass: FaqDefinition::class,
+                referenceField: 'product_id',
             )
         );
     }
